@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="K7 ESPORTS — Professional Counter-Strike 2 team">
+  <title>K7 ESPORTS | Counter-Strike 2</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="black-red">
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="#" class="logo" aria-label="K7 ESPORTS">
+        <span class="logo-k7">K7</span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="#home" data-i18n="nav_home">Главная</a>
+        <a href="#roster" data-i18n="nav_roster">Состав</a>
+        <a href="#stats" data-i18n="nav_stats">Статистика</a>
+        <a href="#matches" data-i18n="nav_matches">Матчи</a>
+        <a href="#news" data-i18n="nav_news">Новости</a>
+        <a href="#media" data-i18n="nav_media">Медиа</a>
+      </nav>
+
+      <div class="header-right">
+        <div class="social-icons" id="headerSocials">
+          <!-- filled by JS -->
+        </div>
+        <div class="lang-switch">
+          <button type="button" class="lang-btn active" data-lang="ru">RU</button>
+          <button type="button" class="lang-btn" data-lang="en">EN</button>
+        </div>
+        <button type="button" class="gear-btn" id="gearBtn" aria-label="Settings" title="Hold for admin">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="3"></circle>
+            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+          </svg>
+        </button>
+        <button type="button" class="burger" id="burgerBtn" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero / Home -->
+    <section id="home" class="hero section-animate">
+      <div class="container hero-inner">
+        <div class="hero-top">
+          <div class="region-badge" id="regionBadge">REGION: <span id="regionValue">CIS</span></div>
+        </div>
+        <h1 class="team-name" id="teamName">K7 ESPORTS</h1>
+        <p class="tagline" id="tagline">MORE THAN JUST A TEAM</p>
+        <p class="team-desc" id="teamDesc">Профессиональный состав по Counter-Strike 2. Дисциплина, стратегия и воля к победе.</p>
+      </div>
+    </section>
+
+    <!-- Roster - 5 cards in one row always -->
+    <section id="roster" class="section section-animate">
+      <div class="container">
+        <div class="section-head">
+          <h2 data-i18n="roster_title">Состав</h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="roster-row" id="rosterRow">
+          <!-- 5 player cards injected by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Stats HLTV style -->
+    <section id="stats" class="section section-animate">
+      <div class="container">
+        <div class="section-head">
+          <h2 data-i18n="stats_title">Статистика команды</h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="stats-grid" id="statsGrid">
+          <!-- stats cards -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Matches -->
+    <section id="matches" class="section section-animate bg-alt">
+      <div class="container">
+        <div class="section-head">
+          <h2 data-i18n="matches_title">Матчи</h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="matches-list" id="matchesList">
+          <p class="empty-state" data-i18n="no_matches">Матчи пока не добавлены</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- News & Highlights -->
+    <section id="news" class="section section-animate">
+      <div class="container">
+        <div class="section-head">
+          <h2 data-i18n="news_title">Новости</h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="news-grid" id="newsGrid">
+          <p class="empty-state" data-i18n="no_news">Новостей пока нет</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="media" class="section section-animate bg-alt">
+      <div class="container">
+        <div class="section-head">
+          <h2 data-i18n="media_title">Хайлайты</h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="highlights-grid" id="highlightsGrid">
+          <p class="empty-state" data-i18n="no_highlights">Хайлайты пока не добавлены</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-logo">K7</div>
+      <div class="footer-socials" id="footerSocials"></div>
+      <p class="copyright">&copy; 2026 K7 ESPORTS. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Admin Login Modal -->
+  <div class="modal" id="loginModal" hidden>
+    <div class="modal-backdrop"></div>
+    <div class="modal-card">
+      <h3>K7 ADMIN</h3>
+      <p data-i18n="login_hint">Введите пароль администратора</p>
+      <form id="loginForm">
+        <input type="password" id="adminPass" placeholder="Password" autocomplete="current-password" required>
+        <button type="submit" class="btn btn-primary" data-i18n="btn_login">Войти</button>
+      </form>
+      <p class="error" id="loginError" hidden></p>
+      <button type="button" class="btn-link" id="closeLogin" data-i18n="btn_close">Закрыть</button>
+    </div>
+  </div>
+
+  <!-- Admin Panel Overlay -->
+  <div class="admin-panel" id="adminPanel" hidden>
+    <div class="admin-header">
+      <h2>K7 Admin</h2>
+      <div class="admin-actions">
+        <button type="button" class="btn btn-outline" id="previewDesktop">ПК</button>
+        <button type="button" class="btn btn-outline" id="previewMobile">Телефон</button>
+        <button type="button" class="btn btn-danger" id="logoutBtn" data-i18n="btn_logout">Выйти</button>
+      </div>
+    </div>
+    <div class="admin-body">
+      <aside class="admin-nav">
+        <button class="admin-nav-btn active" data-tab="settings">Настройки</button>
+        <button class="admin-nav-btn" data-tab="players">Состав</button>
+        <button class="admin-nav-btn" data-tab="stats">Статистика</button>
+        <button class="admin-nav-btn" data-tab="matches">Матчи</button>
+        <button class="admin-nav-btn" data-tab="news">Новости</button>
+        <button class="admin-nav-btn" data-tab="highlights">Хайлайты</button>
+        <button class="admin-nav-btn" data-tab="socials">Соцсети</button>
+        <button class="admin-nav-btn" data-tab="themes">Темы</button>
+      </aside>
+      <div class="admin-content">
+        <!-- Tabs content injected / controlled by JS -->
+        <div class="admin-tab active" id="tab-settings"></div>
+        <div class="admin-tab" id="tab-players"></div>
+        <div class="admin-tab" id="tab-stats"></div>
+        <div class="admin-tab" id="tab-matches"></div>
+        <div class="admin-tab" id="tab-news"></div>
+        <div class="admin-tab" id="tab-highlights"></div>
+        <div class="admin-tab" id="tab-socials"></div>
+        <div class="admin-tab" id="tab-themes"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" hidden></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
